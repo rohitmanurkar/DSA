@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 vector < int > sortedArray(int a[], int n,int b[], int m) 
-{   int i,j;
+{   int i=0,j=0;
     vector<int> uni;
      while(i<n && j<m)
     {   
