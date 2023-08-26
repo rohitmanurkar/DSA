@@ -77,3 +77,67 @@ int main() {
 
     return 0;
 }
+/*
+let's perform a dry run of your code step by step with a sample input.
+
+**Input:**
+```
+Number of rows: 4
+Number of columns: 4
+Matrix elements:
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+```
+
+**Dry Run:**
+
+1. The code starts by taking the number of rows (4) and columns (4) as input and creates a 4x4 matrix.
+
+2. It then takes the matrix elements as input.
+
+3. The `spiralfunction` is called with this matrix.
+
+4. Inside `spiralfunction`:
+   - `n` is set to 4 (number of rows).
+   - `m` is set to 4 (number of columns).
+   - `left`, `right`, `top`, and `bottom` are initialized to 0, 3, 0, and 3, respectively.
+   - An empty vector `ans` is initialized to store the spiral order traversal.
+
+5. The while loop starts, with the condition `left<=right && top<=bottom` being true.
+
+6. In the first iteration of the loop:
+   - Elements from the top row (`top=0`) from left to right are added to `ans`: `1 2 3 4`.
+
+7. `top` is incremented to 1.
+
+8. Elements from the first column (`right=3`) from top to bottom are added to `ans`: `5 9 13`.
+
+9. `right` is decremented to 2.
+
+10. Since `top<=bottom` is true, elements from the bottom row (`bottom=3`) from right to left are added to `ans`: `16 15 14`.
+
+11. `bottom` is decremented to 2.
+
+12. Since `left<=right` is true, elements from the second column (`left=1`) from bottom to top are added to `ans`: `10 6`.
+
+13. `left` is incremented to 2.
+
+14. In the next iteration, the loop condition is still true.
+
+15. Elements from the remaining portion of the top row are added to `ans`: `7 8`.
+
+16. `top` is incremented to 2.
+
+17. Elements from the remaining portion of the left column are added to `ans`: `11`.
+
+18. `right` is decremented to 1.
+
+19. The loop continues, and the remaining elements are added to `ans` in the correct order.
+
+20. Finally, the `main` function prints the "Spiral Order Traversal" which is `1 2 3 4 8 12 16 15 14 13 9 5 6 10 11 7`.
+
+That's the spiral order traversal of the input matrix.
+
+*/
